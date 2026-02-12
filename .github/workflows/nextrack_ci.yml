@@ -1,0 +1,22 @@
+name: NexTrack CI
+
+on:
+  push:
+    paths:
+      - 'NexTrack/**'
+
+jobs:
+  test-suite:
+    runs-on: ubuntu-latest  # This is the GitHub standard for 'Linux'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install pytest pandas streamlit
+      - name: Run Tests
+        run: |
+          pytest NexTrack/tests
