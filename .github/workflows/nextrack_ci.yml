@@ -3,7 +3,9 @@ name: NexTrack CI
 on:
   push:
     paths:
-      - 'NexTrack/**'
+      branches: [ main ]
+    pull_requests:
+      branches: [ main ] 
 
 jobs:
   test-suite:
