@@ -1,6 +1,6 @@
 import pytest
-from modules.database import init_db
-from modules.ticketing import create_ticket
+from modules.nextrack_dataengine import init_db
+from modules.nextrack_ticketing import create_ticket
 
 def test_create_ticket():
     # 1. Setup: Ensure the database/table exists

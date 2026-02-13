@@ -1,17 +1,32 @@
 
 import os
 import shutil
-from modules.database import init_db, DB_DIR, DB_NAME
+import sqlite3
+import pytest
+from modules.nextrack_dataengine import init_db, DB_DIR, DB_NAME, SCHEMA_PATH
 
-def test_init_db_creates_directory_and_file():
-    # 1. Setup: Completely remove the data directory to simulate a fresh install
+def test_init_db_creates_everything():
+    """Verify that init_db creates the directory, the file, and the schema."""
+    # 1. Setup: Clean slate
     if os.path.exists(DB_DIR):
         shutil.rmtree(DB_DIR)
-    
-    # 2. Execution
+
+    # 2. Pre-condition check: Does the schema file exist where we expect it?
+    assert os.path.exists(SCHEMA_PATH), f"Schema file missing at {SCHEMA_PATH}"
+
+    # 3. Execution
     init_db()
-    
-    # 3. Assertions
-    assert os.path.exists(DB_DIR), f"{DB_DIR} directory was not created"
-    assert os.path.isdir(DB_DIR), f"Path {DB_DIR} is not a directory"
-    assert os.path.exists(DB_NAME), f"{DB_NAME} was not created inside {DB_DIR}"
+
+    # 4. Assertions
+    # Check physical file existence
+    assert os.path.exists(DB_NAME), "Database file was not created"
+
+    # Check internal structure (Did the SQL actually run?)
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+    # Query the sqlite_master table to see if our 'tickets' table exists
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='tickets';")
+    table_exists = cursor.fetchone()
+    conn.close()
+
+    assert table_exists is not None, "Table 'tickets' was not found in the database"
