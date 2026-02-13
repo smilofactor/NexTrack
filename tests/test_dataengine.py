@@ -15,7 +15,7 @@ def test_init_db_creates_everything():
     assert os.path.exists(SCHEMA_PATH), f"Schema file missing at {SCHEMA_PATH}"
 
     # 3. Execution
-    init_db()
+    init_db('sqlite')
 
     # 4. Assertions
     # Check physical file existence
