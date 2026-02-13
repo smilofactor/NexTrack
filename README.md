@@ -1,4 +1,4 @@
-![NexTrack CI](https://github.com/smilofactor/NexTrack/actions/workflows/nextrack_ci.yml/badge.svg)
+![NexTrack CI](https://github.com/smilofactor/NexTrack/actions/workflows/nextrack_ci.yml/badge.svg?branch=main)
 
 # NexTrack
 
