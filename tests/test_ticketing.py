@@ -1,6 +1,14 @@
+import pytest
+from modules.database import init_db
+from modules.ticketing import create_ticket
 
 def test_create_ticket():
-    # This will fail until we create modules/ticketing.py
-    from modules.ticketing import create_ticket
-    assert create_ticket("Test Ticket") is not None
-
+    # 1. Setup: Ensure the database/table exists
+    init_db()
+    
+    # 2. Execution: Create a ticket
+    ticket_id = create_ticket("Complete the Showcase Project")
+    
+    # 3. Assertion: Verify the ticket was created and returned an ID
+    assert ticket_id is not None
+    assert ticket_id > 0
