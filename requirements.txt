@@ -1,0 +1,2 @@
+# NexTrack dependencies
+# Add packages as development progresses

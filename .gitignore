@@ -1,0 +1,39 @@
+
+# --- Custom items ---
+*~
+.*~
+TESTFILES
+
+# --- NexTrack Storage (The Ghost Folders) ---
+# We ignore the default storage location to force 
+# developers to rely on the environment/sandbox.
+
+
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+
+# --- Pytest & Testing Artifacts ---
+.pytest_cache/
+.coverage
+htmlcov/
+/tmp/pytest-of-*/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
+
+# --- SQLite database files ---
+*.db
+*.sqlite3
+
+# --- Distribution / packaging
+build/
+dist/
+*.egg-info
