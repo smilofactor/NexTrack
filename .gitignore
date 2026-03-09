@@ -2,6 +2,7 @@
 # --- Custom items ---
 *~
 .*~
+*.md~
 TESTFILES
 
 # --- NexTrack Storage (The Ghost Folders) ---
