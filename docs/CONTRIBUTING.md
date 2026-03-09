@@ -48,9 +48,9 @@ test     automated tests
 ui       interface layer
 
 
-## AI rehdyrate context path
+## AI rehydrate context path
 
 README.md
 STATE.md
 docs/CONTRIBUTING.md
-recent commits (git log and git log --stat if necessary)
+recent commits (git log, optionally git log --stat)
