@@ -6,18 +6,27 @@ app.py
 Application entry point.
 Launches UI interface, currently defaults to streamlit.
 
-data/
-data/engines
-Persistence adapters and storage engines.
+infrastructure/
+Contains adapters for external systems such as
+databases, APIs, and network transports.
+
+infrastructure/database/
+Database adapters are the entry point for storage access
+services go through here.
+
+infrastructure/database/engines
+Database adapters will access the engines using tasks.
+Engines will provide access to JSON and SQLite.
 SQLite is the default backend.
 
 domain/
-Domain entities and core business objects.
-These objects represent projects, tasks, and related
-concepts independent of persistence or UI concerns.
+Core business model of NexTrack.
+Contains entity definitions and business rules for
+concepts such as projects, tasks, and dependencies.
+This layer must not depend on database code, UI code,
+or external services.
 
 services/
-Application service layer.
 Coordinates domain objects and persistence adapters.
 All database access must pass through this layer.
 
@@ -26,7 +35,8 @@ Automated tests for all aspects of the NexTrack project.
 
 ui/
 User interface layer.
-Currently primary interface is streamlit, cli and other guis will be added later.
+Currently primary interface is streamlit
+cli and other guis will be added later.
 
 
 ## Commit Message Conventions
