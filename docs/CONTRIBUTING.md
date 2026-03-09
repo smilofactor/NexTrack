@@ -48,3 +48,9 @@ test     automated tests
 ui       interface layer
 
 
+## AI rehdyrate context path
+
+README.md
+STATE.md
+docs/CONTRIBUTING.md
+recent commits (git log and git log --stat if necessary)
