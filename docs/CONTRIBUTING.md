@@ -118,6 +118,7 @@ domain must not depend on infrastructure or UI
 
 
 ## Flow (to put it another way)
+
            UI
             ↓
         Services
@@ -125,6 +126,12 @@ domain must not depend on infrastructure or UI
     Domain   Infrastructure
                    ↓
                 Engines
+
+## TDD Rule
+
+Domain + Services → TDD
+Infrastructure → add tests after interface stabilizes
+UI → minimal testing
 
 
 ## AI Rehydrate Context Path
