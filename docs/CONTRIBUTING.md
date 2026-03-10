@@ -133,4 +133,6 @@ README.md
 STATE.md
 docs/CONTRIBUTING.md
 recent commits (git log, optionally git log --stat)
+tree
+.gitignore
 
