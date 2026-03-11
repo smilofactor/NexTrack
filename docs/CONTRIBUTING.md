@@ -87,6 +87,7 @@ test     automated tests
 ui       interface layer
 
 
+
 ## Architecture Principles
 
 • Domain layer must remain framework-independent
@@ -142,4 +143,6 @@ docs/CONTRIBUTING.md
 recent commits (git log, optionally git log --stat)
 tree
 .gitignore
+
+
 
