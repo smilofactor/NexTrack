@@ -8,6 +8,7 @@ Bootstraps the application, launches a UI interface.
 Currently defaults to Streamlit.
 Behavior may be modified by using command line switches.
 
+
 infrastructure/
 Adapters to external systems such as databases,
 APIs, and network transports.
@@ -35,6 +36,10 @@ different backends.
 SQLite is the default backend.  JSON may be used
 for lightweight storage or testing.
 
+(Future)
+infrastructure/api
+
+
 domain/
 Defines NexTrack's core business entities and rules.
 Therefore no framework code is to ever be used here.
@@ -59,6 +64,21 @@ All database access is to pass through this layer.
 
 tests/
 Automated tests for all aspects of the NexTrack project.
+
+tests/unit/
+Contains testing packages for NexTrack infrastructure
+
+tests/unit/domain/
+Testing NexTrack domain/ packages
+
+tests/unit/services/
+Testing NexTrack services/ packages
+
+tests/architecture
+Enforces NexTrack project architecture.
+Tests to determine if domain is importing internal NexTrack
+packages, throwing an error if detected.
+
 
 ui/
 User interface layer.
@@ -128,11 +148,31 @@ domain must not depend on infrastructure or UI
                    ↓
                 Engines
 
+
+## TDD Layer Order
+
+domain
+↓
+services
+↓
+infrastructure
+
+
 ## TDD Rule
 
 Domain + Services → TDD
 Infrastructure → add tests after interface stabilizes
 UI → minimal testing
+
+
+## TDD Path
+
+Project entity
+Task entity
+Task lifecycle
+Project contains tasks
+TaskService
+ProjectService
 
 
 ## AI Rehydrate Context Path
