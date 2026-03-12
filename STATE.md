@@ -28,15 +28,24 @@ Git Tag: v1-bootstrap
 - .gitignore configured for Python environment
 - README.md
 - This file
+- Basic testing scaffolding
+- docs/CONTRIBUTING.md
 
 ## What Is Intentionally Missing
-- No test framework configured
+- No test framework configured(In progress, following TDD principles)
 - No persistence logic implemented
 - No CLI interface implemented
 - No CI/CD pipeline configured
 
 ## Immediate Next Action
-Introduce pytest and create first failing test targeting service layer.
+(In progress) Introduce pytest and create first failing test targeting service layer.
+
+## In progress
+- Basic testing framework
+- Following TDD principles
+- pytest.ini in project root
+- Test to enforce domain import rules (no import from NexTrack packages)
 
 
 ## Post Session Corrections Go here.
+In the future will install import-linter
