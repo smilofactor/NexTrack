@@ -40,12 +40,18 @@ Git Tag: v1-bootstrap
 ## Immediate Next Action
 (In progress) Introduce pytest and create first failing test targeting service layer.
 
-## In progress
+## In Progress
 - Basic testing framework
 - Following TDD principles
 - pytest.ini in project root
 - Test to enforce domain import rules (no import from NexTrack packages)
 
+## Repository Phase
+- testing infrastructure (in progress)
+- test runner (initialized)
+- architecture guardrails (completed)
+- Test directories (created)
 
 ## Post Session Corrections Go here.
 In the future will install import-linter
+
