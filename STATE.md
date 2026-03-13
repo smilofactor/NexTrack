@@ -37,11 +37,9 @@ Git Tag: v0.2.0-architecture-baseline
 - No CLI interface implemented
 - No CI/CD pipeline configured
 
-## Immediate Next Action
-Begin domain-level TDD:
-1. Project entity
-2. Task entity
-3. Service layer orchestration
+## Current Phase
+Architecture Baseline Established
+Beginning Domain TDD
 
 ## In Progress
 - Basic testing framework
@@ -52,6 +50,12 @@ Begin domain-level TDD:
 - services
 - infrastructure
 - tests
+
+## Immediate Next Action
+Begin domain-level TDD:
+1. Project entity
+2. Task entity
+3. Service layer orchestration
 
 ## Repository Phase
 - testing infrastructure (in progress)
