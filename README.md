@@ -4,15 +4,24 @@ NexTrack is a local-first project and task management system with optional peer-
 
 ## Status
 
-Version: v1 (Rebuild)
+Version: Pre-1. (Active Rebuild)
 Stage: Active Development
 Goal: MVP
 Language: Python
 
-## Architectural Intent
 
-NexTrack is being rebuilt with explicit separation between interface, service layer, and persistence. 
-All interactions with storage occur through a defined service boundary to enforce modularity and testability.
+## Architecture
+
+NexTrack follows a layered architecture:
+
+interface
+  → services
+      → domain
+      → infrastructure
+
+Key rule:
+The domain layer contains pure business objects and must not depend on services or infrastructure.
+
 
 
 ## Design Principles
