@@ -20,6 +20,14 @@ env/
 venv/
 ENV/
 
+# Python tooling
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+
 # --- Pytest & Testing Artifacts ---
 .pytest_cache/
 .coverage
