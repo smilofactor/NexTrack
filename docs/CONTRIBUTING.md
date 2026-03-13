@@ -107,6 +107,14 @@ test     automated tests
 ui       interface layer
 
 
+## The following use repo scope:
+
+.gitignore
+pytest.ini
+requirements.txt
+.editorconfig
+.pre-commit-config.yaml
+
 
 ## Architecture Principles
 
@@ -173,6 +181,12 @@ Task lifecycle
 Project contains tasks
 TaskService
 ProjectService
+
+
+## Relevant Docs
+README.md               → what the project is
+STATE.md                → current project status
+docs/CONTRIBUTING.md    → how to develop it
 
 
 ## AI Rehydrate Context Path
